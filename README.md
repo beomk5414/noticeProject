@@ -2,9 +2,9 @@
 Notice web application implementation
 
 # 개발 환경
-MAC OS 11.1 Big Sur
-STS : 4.9.0 version
-Java : SE 1.8
+- MAC OS 11.1 Big Sur
+- STS : 4.9.0 version
+- Java : SE 1.8
 
 # 프로젝트 빌드 방법
 1. 프로젝트 소스코드를 gitHub에서 내려받는다. (https://github.com/beomk5414/noticeProject)
