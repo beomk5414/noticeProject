@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.rsupport.notice.mapper.NoticeMapper"> 
+
+	<select id="totalRecord" resultType="int">
+		SELECT COUNT(*) FROM NOTICE
+	</select>
+	
+	<select id="list" resultType="com.rsupport.notice.dto.NoticeDto">
+		SELECT B.*
+		  FROM (SELECT ROWNUM AS RN, A.* 
+		          FROM (SELECT *
+		                  FROM NOTICE
+		                 ORDER BY NO DESC ) A ) B
+		 WHERE B.RN BETWEEN #{param1} AND #{param2} 
+	</select>
+
+	<insert id="insert">
+		INSERT
+		  INTO NOTICE
+		       (WRITER, TITLE, CONTENT, FILENAME, REGDATE, LASTEDITED)
+		VALUES (#{param1}, #{param2}, #{param3}, #{param4}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+	</insert>
+	
+	<select id="view" parameterType="int" resultType="com.rsupport.notice.dto.NoticeDto">
+		SELECT * FROM NOTICE WHERE NO = #{no}	
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		DELETE
+		  FROM NOTICE
+		 WHERE NO = #{no} 
+	</delete>
+	
+	<update id="update">
+		UPDATE NOTICE
+		   SET TITLE = #{param1}, CONTENT = #{param2}, FILENAME = #{param3}, LASTEDITED=CURRENT_TIMESTAMP
+		 WHERE NO = #{param4}
+	</update>
+</mapper>
