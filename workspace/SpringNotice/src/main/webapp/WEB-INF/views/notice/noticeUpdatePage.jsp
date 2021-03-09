@@ -41,7 +41,7 @@
 				<textarea name="content" id="smartEditor" style="width: 80%">${noticeDto.content}</textarea>
 			</div>
 			<div class="form-group">
-				<label for="title">첨부 파일/이미지 (복수 등록 가능)</label>
+				<label for="title">첨부 파일 (복수 등록 가능, 최대 10MB)</label>
 				<input type="file" class="form-control" name="filename" id="filename" style="width: 50%" multiple/><br/>
 				<c:if test="${noticeDto.filename ne '' && not empty noticeDto.filename }">
 					<c:set var="filenameList" value="${fn:split(noticeDto.filename,'&')}"/>
