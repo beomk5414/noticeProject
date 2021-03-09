@@ -53,7 +53,7 @@
 		<p> 공지사항 등록시 Naver 이미지 캡차API를 활용한 자동입력 방지 문자입력 기능 구현.</p>
 
 		<h4>GitHub</h4>
-		<p>Source Code: <a href="https://github.com/beomk5414/SpringNoticeProject">https://github.com/beomk5414/SpringNoticeProject</a></p>
+		<p>Source Code: <a href="https://github.com/beomk5414/noticeProject">https://github.com/beomk5414/noticeProject</a></p>
 	</div>
 </div>
 
