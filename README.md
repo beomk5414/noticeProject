@@ -1,2 +1,2 @@
-# noticeProject
-Spring boot Notice Web Developement
+# SpringNoticeProject
+Notice web application implementation
